@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <script>
+
+    //构造函数
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+      this.eat = function () {
+        console.log("您吃了吗");
+      };
+    }
+    //通过原型添加方法
+    Person.prototype.sayHi = function () {
+      console.log("萨瓦迪卡");
+    };
+    //实例化对象，并初始化
+    var per=new Person("小博博",38);
+    var fdfd= new Person();
+
+    console.log(per.name,per.age);
+    per.eat();
+    per.sayHi();
+    console.dir(per);
+    console.dir(Person);
+
+    //原型对象中添加的属性和方法,最终都是实例对象使用的
+
+    //1.Ctrl+鼠标左键---webstorm 转到定义的方式,直接可以看到参数及返回值,自己用代码试
+    //2.百度,谷歌,
+    //3.MDN
+
+//    var str="小博好帅哦";
+//    str=str.replace("帅","猥琐");
+//    console.log(str);
+
+
+    //原型对象的方法,可以通过实例对象来调用
+    //只要原型对象中有这个方法，那么实例对象就可以使用
+
+
+//    var arr=[10,20,50,100,40,30];
+//
+//
+//    arr.sort(function (a,b) {
+//      if(a>b){
+//        return 1;
+//      }else if(a==b){
+//        return 0;
+//      }else{
+//        return -1;
+//      }
+//    });
+
+
+
+    //字符串有打招呼的方法,并使用
+
+//    String.prototype.sayHi=function () {
+//      console.log("哈哈,您好啊");
+//    };
+//
+//
+//    var str="小博博";
+//    str.sayHi();
+//
+//    "".sayHi();
+
+
+//    Array.prototype.eat=function () {
+//      console.log("真好吃");
+//    };
+//
+//    [].eat();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+  [].eat();
+
+  //为内置对象添加方法,不要重名了.
+
+  String.prototype.replace=function () {
+    console.log("就这样了");
+  };
+  var str="小杨好帅哦";
+  str.replace("帅","猥琐");
+  console.log(str);
+</script>
+
+</body>
+</html>

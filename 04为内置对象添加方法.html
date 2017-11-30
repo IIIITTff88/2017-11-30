@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <script>
+    //原型对象的方法,实例对象是可以直接使用的
+
+    //为数组添加一个自己的排序的方法
+//    Array.prototype.mySort=function () {
+//      for(var i=0;i<this.length-1;i++){
+//          for(var j=0;j<this.length-1-i;j++){
+//              if(this[j]>this[j+1]){
+//                  var temp=this[j];
+//                this[j]=this[j+1];
+//                this[j+1]=temp;
+//              }//end if
+//          }// end for
+//      }//end for
+//    };
+//
+//    var array=[100,3,20,50,40];
+//    array.mySort();
+//    console.log(array);
+
+
+    //为字符串对象添加方法
+
+    String.prototype.play=function () {
+      console.log("这是玩游戏");
+    };
+    var str="";
+    str.play();
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>
